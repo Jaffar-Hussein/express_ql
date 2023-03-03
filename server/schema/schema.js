@@ -1,16 +1,7 @@
-const Project = require('../models/Project');
-const Client = require('../models/Client');
-
-const {
-    // 
-  GraphQLObjectType,
-  GraphQLID,
-  GraphQLString,
-  GraphQLSchema,
-  GraphQLList,
-  GraphQLNonNull,
-  GraphQLEnumType,
-} = require('graphql');
+// const Project = require('../models/Project');
+// const Client = require('../models/Client');
+const { projects, clients } = require('../sampleData.js');
+const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLSchema, GraphQLList, GraphQLNonNull, GraphQLEnumType } = require('graphql');
 
 // Project Type
 // const ProjectType = new GraphQLObjectType({
@@ -53,6 +44,6 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
-module.exports = new GraphQLSchema({
+module.exports =  new GraphQLSchema({
     query:RootQuery,
 })
